@@ -1,0 +1,16 @@
+---
+import Avatar from '../components/Avatar.astro';
+import Details from '../components/Details.astro';
+import Socials from '../components/Socials.astro';
+import Layout from '../layouts/Layout.astro';
+
+const title = "Matt Ryles";
+const siteName = 'Matt Ryles Personal Site';
+const siteDescription = 'Landing Page for Matt Ryles';
+---
+
+<Layout title={title} siteName={siteName} siteDescription={siteDescription}>
+	<Avatar />
+	<Details />
+	<Socials />
+</Layout>
