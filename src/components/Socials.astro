@@ -15,47 +15,56 @@ enum Type {
 	twitter = 'Twitter',
 	instagram = 'Instagram',
 	email = 'Email',
-	bluesky = "BlueSky"
+	bluesky = 'BlueSky',
+	cv = 'CV',
 }
 
 const socials = [
 	{
-		name: Type.twitter,
-		url: 'https://x.com/mattryles',
-		icon: 'assets/svg/icons/x.svg',
-		color: 'bg-gray-800',
+		name: Type.email,
+		url: 'matt@ryles.com',
+		icon: 'assets/svg/icons/email.svg',
+		color: 'bg-white',
+	},
+	{
+		name: Type.cv,
+		url: 'https://ryles.com/Matt-Ryles-CV.pdf',
+		icon: 'assets/svg/icons/cv.svg',
+		color: 'bg-white',
 	},
 	{
 		name: Type.gitHub,
 		url: 'https://github.com/mattryles',
 		icon: 'assets/svg/icons/github.svg',
-		color: 'bg-cyan-500',
-	},
-	{
-		name: Type.instagram,
-		url: 'https://www.instagram.com/matt.ryles',
-		icon: 'assets/svg/icons/instagram.svg',
-		color: 'bg-yellow-400',
-	},
-	{
-		name: Type.email,
-		url: 'matt@ryles.com',
-		icon: 'assets/svg/icons/email.svg',
-		color: 'bg-green-400',
-	},
-	{
-		name: Type.linkedIn,
-		url: 'https://www.linkedin.com/in/mattryles',
-		icon: 'assets/svg/icons/linkedin.svg',
-		color: 'bg-sky-700',
-	},
-	{
-		name: Type.bluesky,
-		url: 'https://bsky.app/profile/mattryles.bsky.social',
-		icon: 'assets/svg/icons/bluesky.svg',
 		color: 'bg-white',
-	}
-	
+	},
+
+	// {
+	// 	name: Type.linkedIn,
+	// 	url: 'https://www.linkedin.com/in/mattryles',
+	// 	icon: 'assets/svg/icons/linkedin.svg',
+	// 	color: 'bg-sky-700',
+	// },
+	// {
+	// 	name: Type.twitter,
+	// 	url: 'https://x.com/mattryles',
+	// 	icon: 'assets/svg/icons/x.svg',
+	// 	color: 'bg-gray-800',
+	// },
+
+	// {
+	// 	name: Type.instagram,
+	// 	url: 'https://www.instagram.com/matt.ryles',
+	// 	icon: 'assets/svg/icons/instagram.svg',
+	// 	color: 'bg-yellow-400',
+	// },
+
+	// {
+	// 	name: Type.bluesky,
+	// 	url: 'https://bsky.app/profile/mattryles.bsky.social',
+	// 	icon: 'assets/svg/icons/bluesky.svg',
+	// 	color: 'bg-white',
+	// },
 ];
 
 const getColor = (type: Type) => socials.find((social) => social.name === type)?.color;
