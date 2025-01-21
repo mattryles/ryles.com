@@ -1,13 +1,4 @@
 ---
-/**
- * This section is for adding your social media links.
- *
- * 1. Add your social media links: Replace 'xxx' with your username for each social media platform.
- * 2. Add more links: If you want to include more social media platforms, replicate the existing pattern and update the `Type` enum accordingly.
- * 3. Adjust the order: You can change the order of the social media icons by rearranging the objects.
- * 4. Customize icon colors: To change the color of the icons, refer to the Tailwind CSS color classes. Visit: https://tailwindcss.com/docs/customizing-colors
- *
- */
 
 enum Type {
 	linkedIn = 'LinkedIn',
@@ -24,47 +15,20 @@ const socials = [
 		name: Type.email,
 		url: 'matt@ryles.com',
 		icon: 'assets/svg/icons/email.svg',
-		color: 'bg-white',
+		color: '',
 	},
 	{
 		name: Type.cv,
 		url: 'https://ryles.com/Matt-Ryles-CV.pdf',
 		icon: 'assets/svg/icons/cv.svg',
-		color: 'bg-white',
+		color: '',
 	},
 	{
 		name: Type.gitHub,
 		url: 'https://github.com/mattryles',
 		icon: 'assets/svg/icons/github.svg',
-		color: 'bg-white',
+		color: '',
 	},
-
-	// {
-	// 	name: Type.linkedIn,
-	// 	url: 'https://www.linkedin.com/in/mattryles',
-	// 	icon: 'assets/svg/icons/linkedin.svg',
-	// 	color: 'bg-sky-700',
-	// },
-	// {
-	// 	name: Type.twitter,
-	// 	url: 'https://x.com/mattryles',
-	// 	icon: 'assets/svg/icons/x.svg',
-	// 	color: 'bg-gray-800',
-	// },
-
-	// {
-	// 	name: Type.instagram,
-	// 	url: 'https://www.instagram.com/matt.ryles',
-	// 	icon: 'assets/svg/icons/instagram.svg',
-	// 	color: 'bg-yellow-400',
-	// },
-
-	// {
-	// 	name: Type.bluesky,
-	// 	url: 'https://bsky.app/profile/mattryles.bsky.social',
-	// 	icon: 'assets/svg/icons/bluesky.svg',
-	// 	color: 'bg-white',
-	// },
 ];
 
 const getColor = (type: Type) => socials.find((social) => social.name === type)?.color;
