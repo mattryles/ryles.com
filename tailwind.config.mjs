@@ -4,8 +4,8 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				horizonAnimated: "url('/assets/svg/backgrounds/horizon-animated.svg')",
-				horizon: "url('/assets/svg/backgrounds/horizon.svg')",
+				horizonAnimated: "var(--horizon-animated)",
+				horizon: "var(--horizon)",
 			},
 			keyframes: {
 				'zoom-in': {
