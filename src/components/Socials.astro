@@ -33,7 +33,7 @@ const socials = [
 
 const getColor = (type: Type) => socials.find((social) => social.name === type)?.color;
 const getClass = (type: Type) =>
-	`scale-100 rounded-full border-2 border-gray-950 ${getColor(
+	`scale-100 rounded-full border-2 border-gray-950 dark:border-white ${getColor(
 		type,
 	)} transition duration-300 hover:scale-110 animate-zoom-in`;
 ---
@@ -50,7 +50,10 @@ const getClass = (type: Type) =>
 					target="_blank"
 					rel="nofollow noopner"
 				>
-					<img class="size-14 p-3 md:size-16" src={social.icon} alt={social.name} />
+					<picture>
+						<source srcset={social.icon.replace('.svg', '-dark.svg')} media="(prefers-color-scheme: dark)" />
+						<img class="size-14 p-3 md:size-16" src={social.icon} alt={social.name} />
+					</picture>
 				</a>
 			);
 		})
